@@ -33,7 +33,7 @@ post '/dogs' do
   dog.to_json
 end
 
-patch '/dogs/:id' do
+patch '/dogs/:id/edit' do
   dog = Dog.find(params[:id])
   dog.update(
     name: params[:name],
