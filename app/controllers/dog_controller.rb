@@ -6,9 +6,14 @@ class DogController < Sinatra::Base
     dog.to_json
   end
 
+  get "/dogs/agencies" do
+    agency = Dog.all 
+    agency.to_json(include: :agency)
+  end
+
    get '/dogs/:id' do
     dog = Dog.find(params[:id])
-    dog.to_json(include: :agencies)
+    dog.to_json
   end
 
   delete '/dogs/:id' do

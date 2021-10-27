@@ -6,9 +6,14 @@ class AgencyController < Sinatra::Base
     agency.to_json
   end
 
+  get "/agencies/dogs" do
+    agency = Agency.all 
+    agency.to_json(include: :dogs)
+  end
+
   get '/agencies/:id' do
     agency = Agency.find(params[:id])
-    agency.to_json
+    agency.to_json(include: :dogs)
   end
 
   delete '/agencies/:id' do
@@ -24,7 +29,7 @@ post '/agencies' do
   agency.to_json
 end
 
-patch '/agencies/:id' do
+patch '/agencies/:id/edit' do
   agency = Agency.find(params[:id])
   agency.update(
     name: params[:name]
