@@ -23,6 +23,7 @@ class DogController < Sinatra::Base
 end
 
 post '/dogs' do
+  # dogs = Dog.create(params)
   dog = Dog.create(
     name: params[:name],
     breed: params[:breed],
