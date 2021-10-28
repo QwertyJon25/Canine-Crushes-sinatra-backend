@@ -17,4 +17,9 @@ def self.oldest_dog
     self.first.agency
   end
 
+  def key_print
+    hash = self.all
+    hash.each {|name, breed| puts "#{name} is a #{breed}."}
+  end
+
 end
