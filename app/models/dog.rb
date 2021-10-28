@@ -9,4 +9,12 @@ def self.oldest_dog
     self.order(:age)[0]
   end 
 
+  def self.all_dogs
+    self.all
+  end
+
+  def self.agency
+    self.first.agency
+  end
+
 end

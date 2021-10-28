@@ -28,7 +28,7 @@ post '/dogs' do
     name: params[:name],
     breed: params[:breed],
     age: params[:age],
-    img_url: params[:img_url],
+    image_url: params[:image_url],
     agency_id: params[:agency_id]
   )
   dog.to_json
@@ -40,7 +40,7 @@ patch '/dogs/:id/edit' do
     name: params[:name],
     breed: params[:breed],
     age: params[:age],
-    img_url: params[:img_url],
+    image_url: params[:image_url],
     agency_id: params[:agency_id]
   )
   dog.to_json

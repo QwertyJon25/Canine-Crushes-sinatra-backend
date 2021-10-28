@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_10_25_160819) do
     t.string "name"
     t.integer "age"
     t.string "breed"
-    t.string "img_url"
+    t.string "image_url"
     t.integer "agency_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
